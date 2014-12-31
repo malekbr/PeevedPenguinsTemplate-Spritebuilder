@@ -65,6 +65,7 @@
 
 - (CCScene*) startScene
 {
+    CCLOG(@"Test");
     return [CCBReader loadAsScene:@"MainScene"];
 }
 
