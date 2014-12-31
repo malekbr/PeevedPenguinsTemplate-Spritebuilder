@@ -58,6 +58,7 @@
     [CCBReader load:@"Seal"];
     
     CCLOG(@"Test");
+    NSLog(@"Test");
     
     return YES;
 }
