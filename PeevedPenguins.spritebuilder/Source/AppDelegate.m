@@ -54,18 +54,11 @@
     
     [self setupCocos2dWithOptions:cocos2dSetup];
     
-    [CCBReader load:@"Penguin"];
-    [CCBReader load:@"Seal"];
-    
-    CCLOG(@"Test");
-    NSLog(@"Test");
-    
     return YES;
 }
 
 - (CCScene*) startScene
 {
-    CCLOG(@"Test");
     return [CCBReader loadAsScene:@"MainScene"];
 }
 
