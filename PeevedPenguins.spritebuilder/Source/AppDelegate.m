@@ -57,6 +57,8 @@
     [CCBReader load:@"Penguin"];
     [CCBReader load:@"Seal"];
     
+    CCLOG(@"Test");
+    
     return YES;
 }
 
