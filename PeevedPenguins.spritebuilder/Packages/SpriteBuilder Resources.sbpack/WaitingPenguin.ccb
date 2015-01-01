@@ -16,7 +16,7 @@
 	<key>currentResolution</key>
 	<integer>0</integer>
 	<key>currentSequenceId</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>docDimensionsType</key>
 	<integer>1</integer>
 	<key>fileType</key>
@@ -2322,8 +2322,6 @@
 		</array>
 		<key>selected</key>
 		<true/>
-		<key>seqExpanded</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
@@ -2375,7 +2373,7 @@
 			<key>length</key>
 			<real>4</real>
 			<key>name</key>
-			<string>JumpAndBlink</string>
+			<string>BlinkAndJump</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
