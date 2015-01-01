@@ -184,9 +184,9 @@ static const float MIN_SPEED = 5.f;
 }
 
 -(void) nextAttempt{
+    CCLOG([_content getActionByTag:_followPenguin.tag].description);
     _currentPenguin = nil;
     [_content stopAction:_followPenguin];
-    CCLOG([_content getActionByTag:_followPenguin.tag].description);
     CCActionMoveTo *actionMoveTo = [CCActionMoveTo actionWithDuration:1.f position:ccp(0, 0)];
     [_content runAction:actionMoveTo];
 }
