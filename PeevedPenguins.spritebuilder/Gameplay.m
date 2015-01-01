@@ -13,6 +13,7 @@
     CCNode *_catapultArm;
     CCNode *_levelNode;
     CCNode *_content;
+    CCNode *_pullbackNode;
 }
 
 // is called when CCB file has completed loading
@@ -23,6 +24,9 @@
     [_levelNode addChild:level];
     // visualize physics bodies & joints
     _physicsNode.debugDraw = TRUE;
+    
+    // nothing shall collide with our invisible nodes
+    _pullbackNode.physicsBody.collisionMask = @[];
 }
 
 // called on every touch in this scene
