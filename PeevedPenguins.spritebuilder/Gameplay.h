@@ -9,5 +9,5 @@
 #import "CCNode.h"
 
 @interface Gameplay : CCNode <CCPhysicsCollisionDelegate>
-
+- (void) sealRemoved:(CCNode *)seal;
 @end
