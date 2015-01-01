@@ -190,6 +190,7 @@ static const float MIN_SPEED = 5.f;
     [_content stopAction:_followPenguin];
     CCLOG(@"Next attempt");
     CCActionMoveTo *actionMoveTo = [CCActionMoveTo actionWithDuration:1.f position:ccp(0, 0)];
+    CCLOG(actionMoveTo.debugDescription);
     [_content runAction:actionMoveTo];
 }
 @end
