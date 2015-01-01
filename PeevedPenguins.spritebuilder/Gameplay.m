@@ -36,6 +36,11 @@
     // add the penguin to the physicsNode of this scene (because it has physics enabled)
     [_physicsNode addChild:penguin];
     
+    // ensure followed object is in visible are when starting
+    self.position = ccp(0, 0);
+    CCActionFollow *follow = [CCActionFollow actionWithTarget:penguin worldBoundary:self.boundingBox];
+    [self runAction:follow];
+    
     // manually create & apply a force to launch the penguin
     CGPoint launchDirection = ccp(1, 0);
     CGPoint force = ccpMult(launchDirection, 8000);
