@@ -122,8 +122,6 @@ static const float MIN_SPEED = 5.f;
     _content.position = ccp(0, 0);
     _followPenguin = [CCActionFollow actionWithTarget:penguin worldBoundary:_content.boundingBox];
     [_content runAction:_followPenguin];
-    NSString *n = [NSString stringWithFormat:@"%lu", (unsigned long)[_content numberOfRunningActions]];
-    CCLOG(n);
     
     // manually create & apply a force to launch the penguin
     CGPoint launchDirection = ccp(1, 0);
@@ -186,15 +184,9 @@ static const float MIN_SPEED = 5.f;
 }
 
 -(void) nextAttempt{
-    NSString *n = [NSString stringWithFormat:@"%lu", (unsigned long)[_content numberOfRunningActions]];
-    CCLOG(n);
     _currentPenguin = nil;
     [_content stopAllActions];
-    n = [NSString stringWithFormat:@"%lu", (unsigned long)[_content numberOfRunningActions]];
-    CCLOG(n);
     CCActionMoveTo *actionMoveTo = [CCActionMoveTo actionWithDuration:1.f position:ccp(0, 0)];
     [_content runAction:actionMoveTo];
-    n = [NSString stringWithFormat:@"%lu", (unsigned long)[_content numberOfRunningActions]];
-    CCLOG(n);
 }
 @end
