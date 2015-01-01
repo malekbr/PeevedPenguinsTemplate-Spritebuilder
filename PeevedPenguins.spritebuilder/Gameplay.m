@@ -162,6 +162,8 @@ static const float MIN_SPEED = 5.f;
 {
     if(_currentPenguin.launched){
         // if speed is below minimum speed, assume this attempt is over
+        NSString *velocity = [NSString stringWithFormat:@" %f", ccpLength(_currentPenguin.physicsBody.velocity)];
+        CCLOG(velocity);
         if (ccpLength(_currentPenguin.physicsBody.velocity) < MIN_SPEED){
             [self nextAttempt];
             return;
