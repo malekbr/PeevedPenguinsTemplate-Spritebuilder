@@ -12,6 +12,7 @@
     CCPhysicsNode *_physicsNode;
     CCNode *_catapultArm;
     CCNode *_levelNode;
+    CCNode *_content;
 }
 
 // is called when CCB file has completed loading
@@ -37,9 +38,9 @@
     [_physicsNode addChild:penguin];
     
     // ensure followed object is in visible are when starting
-    self.position = ccp(0, 0);
-    CCActionFollow *follow = [CCActionFollow actionWithTarget:penguin worldBoundary:self.boundingBox];
-    [self runAction:follow];
+    _content.position = ccp(0, 0);
+    CCActionFollow *follow = [CCActionFollow actionWithTarget:penguin worldBoundary:_content.boundingBox];
+    [_content runAction:follow];
     
     // manually create & apply a force to launch the penguin
     CGPoint launchDirection = ccp(1, 0);
