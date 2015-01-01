@@ -188,7 +188,11 @@ static const float MIN_SPEED = 5.f;
     CCLOG(n);
     _currentPenguin = nil;
     [_content stopAction:_followPenguin];
+    n = [NSString stringWithFormat:@"%lu", (unsigned long)[_content numberOfRunningActions]];
+    CCLOG(n);
     CCActionMoveTo *actionMoveTo = [CCActionMoveTo actionWithDuration:1.f position:ccp(0, 0)];
     [_content runAction:actionMoveTo];
+    n = [NSString stringWithFormat:@"%lu", (unsigned long)[_content numberOfRunningActions]];
+    CCLOG(n);
 }
 @end
