@@ -30,6 +30,8 @@
     // nothing shall collide with our invisible nodes
     _pullbackNode.physicsBody.collisionMask = @[];
     
+    _mouseJointNode = [[CCNode alloc] init];
+    
     [_physicsNode addChild:_mouseJointNode];
     
     _mouseJointNode.physicsBody.collisionMask = @[];
